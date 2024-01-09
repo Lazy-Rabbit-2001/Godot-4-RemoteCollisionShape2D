@@ -28,6 +28,8 @@ void RemoteCollisionShape2D::_bind_methods()
 	ClassDB::bind_method(D_METHOD("set_always_remote", "p_disabled"), &RemoteCollisionShape2D::set_always_remote);
 	ClassDB::bind_method(D_METHOD("is_always_remote"), &RemoteCollisionShape2D::is_always_remote);
 	ClassDB::add_property("RemoteCollisionShape2D", PropertyInfo(Variant::BOOL, "always_remote"), "set_always_remote", "is_always_remote");
+
+	ClassDB::bind_method(D_METHOD("force_update_remote_shapes"), &RemoteCollisionShape2D::force_update_remote_shapes);
 }
 
 RemoteCollisionShape2D::RemoteCollisionShape2D() {
